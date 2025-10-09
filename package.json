@@ -16,7 +16,8 @@
   "type": "commonjs",
   
   "scripts": {
-    "start": "parcel index.html",
+    "clean": "rmdir /s /q .parcel-cache dist",
+    "start": "npm run clean && parcel index.html --no-cache",
     "build":"parcel build index.html",
     "test": "jest"
   },
